@@ -14,6 +14,8 @@ public class _01_2DArray {
         System.out.println(zoo[2][1]);
         System.out.println("------------------------------");
 
+        System.out.println("merhaba ben halil");
+
         for (int i = 0; i < zoo.length; i++) {
 
             for (int j = 0; j < zoo[i].length ; j++) {
