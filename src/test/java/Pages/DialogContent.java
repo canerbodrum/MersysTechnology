@@ -37,17 +37,11 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//ms-text-field[@formcontrolname='name']/input")
     public WebElement nameInput;
 
-    @FindBy(xpath="//ms-text-field[@formcontrolname='code']/input")
-    public WebElement codeInput;
-
     @FindBy(xpath="//ms-save-button/button")
     public WebElement saveButton;
 
     @FindBy(xpath="//div[contains(text(),'successfully')]")
     public WebElement successMessage;
-
-    @FindBy(xpath="//ms-text-field[@formcontrolname='shortName']/input")
-    public WebElement shortName;
 
     @FindBy(xpath="//div[contains(text(),'already exists')]")
     public WebElement alreadyExist;
@@ -64,27 +58,12 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//button[@type='submit']")
     public WebElement deleteDialogBtn;
 
-    @FindBy(xpath="//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']//input")
-    private WebElement integrationCode;
+    @FindBy(xpath="//*[@id='ms-table-0']/div/cdk-virtual-scroll-viewport/div[1]/table/tbody/tr/td[3]/div[1]/ms-edit-button/button")
+    public WebElement editAttestations;
 
-    @FindBy(xpath="//ms-integer-field[@formcontrolname='priority']/input")
-    private WebElement priorityCode;
+    @FindBy(xpath="//*[@id='container-3']/content/app-attestation/ms-browse/div/ms-browse-search/div/mat-form-field")
+    public WebElement attestationsName;
 
-    @FindBy(xpath="//mat-slide-toggle[@formcontrolname='active']")
-    private WebElement toggleBar;
-
-
-    @FindBy(xpath="//mat-select//span[text()='Academic Period']")
-    private WebElement academicPeriod;
-
-    @FindBy(xpath="(//mat-option/span)[1]")
-    private WebElement academicPeriod1;
-
-    @FindBy(xpath="(//span[text()='Grade Level'])[1]")
-    private WebElement gradeLevel;
-
-    @FindBy(xpath="(//mat-option//span)[2]")
-    private WebElement gradeLevel2;
 
 
     public WebElement getWebElement(String strButton){
@@ -94,14 +73,12 @@ public class DialogContent extends Parent{
             case "addButton" : return addButton;
             case "saveButton" : return saveButton;
             case "nameInput" : return nameInput;
-            case "codeInput" : return codeInput;
-            case "integrationCode" : return integrationCode;
-            case "priorityCode" : return priorityCode;
-            case "toggleBar" : return toggleBar;
-            case "academicPeriod" : return academicPeriod;
-            case "academicPeriod1" : return academicPeriod1;
-            case "gradeLevel" : return gradeLevel;
-            case "gradeLevel2" : return gradeLevel2;
+            case "attestationsName" : return attestationsName;
+            case "searchInput" : return searchInput;
+            case "searchButton" : return searchButton;
+            case "editAttestations" : return editAttestations;
+            case "deleteImageBtn" : return deleteImageBtn;
+            case "deleteDialogBtn" : return deleteDialogBtn;
         }
 
         return null;

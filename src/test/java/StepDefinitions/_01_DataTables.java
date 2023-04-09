@@ -43,50 +43,14 @@ public class _01_DataTables {
     public void userShouldLoginSuccesfully() {
         dc.verifyContainsTextFunction(dc.txtTechnoStudy,"Techno Study");
     }
-    @And("Navigate to country page")
-    public void navigateToCountryPage() {
-        ln.clickFunction(ln.setup);
-        ln.clickFunction(ln.parameters);
-        ln.clickFunction(ln.countries);
-    }
 
-    @When("create a country")
-    public void createACountry() {
-        String ulkeAdi= RandomStringUtils.randomAlphanumeric(8); // 8 harf
-        String ulkeKodu= RandomStringUtils.randomNumeric(4); // 4 rakam
 
-        dc.clickFunction(dc.addButton);
-        dc.sendKeysFunction(dc.nameInput, ulkeAdi);
-        dc.sendKeysFunction(dc.codeInput, ulkeKodu);
-        dc.clickFunction(dc.saveButton); // TODO
-    }
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
         dc.verifyContainsTextFunction(dc.successMessage,"success");
     }
 
-    @When("create a country name as {string} code as {string}")
-    public void createACountryNameAsCodeAs(String name, String kod) {
-        dc.clickFunction(dc.addButton);
-        dc.sendKeysFunction(dc.nameInput, name);
-        dc.sendKeysFunction(dc.codeInput, kod);
-        dc.clickFunction(dc.saveButton);
-    }
-    @And("Navigate to CitizenShip page")
-    public void navigateToCitizenShipPage() {
-        ln.clickFunction(ln.setup);
-        ln.clickFunction(ln.parameters);
-        ln.clickFunction(ln.citizenShip);
-    }
-
-    @When("User a CitizenShip name as {string} short name as {string}")
-    public void userACitizenShipNameAsShortNameAs(String name, String shortName) {
-        dc.clickFunction(dc.addButton);
-        dc.sendKeysFunction(dc.nameInput,name);
-        dc.sendKeysFunction(dc.shortName,shortName);
-        dc.clickFunction(dc.saveButton);
-    }
 
     @Then("Already exist message should be displayed")
     public void alreadyExistMessageShouldBeDisplayed() {
@@ -137,28 +101,5 @@ public class _01_DataTables {
             dc.deleteItem(strDeleteText);
         }
     }
-    @When("User Create citizenship with ApacehPOI")
-    public void userCreateCitizenshipWithApacehPOI() {
-        ArrayList<ArrayList<String>> tablo =
-                ExcelUtility.getData("src/test/java/ApachePOI/resource/ApacheExcel2.xlsx", "testCitizen", 2);
 
-        for (ArrayList<String> satir : tablo) {
-            dc.clickFunction(dc.addButton);
-            dc.sendKeysFunction(dc.nameInput, satir.get(0));
-            dc.sendKeysFunction(dc.shortName, satir.get(1));
-            dc.clickFunction(dc.saveButton);
-            dc.verifyContainsTextFunction(dc.successMessage, "success");
-        }
-    }
-
-    @Then("User Delete citizenship with ApacehPOI")
-    public void userDeleteCitizenshipWithApacehPOI() {
-        ArrayList<ArrayList<String>> tablo =
-                ExcelUtility.getData("src/test/java/ApachePOI/resource/ApacheExcel2.xlsx", "testCitizen", 1);
-
-        for (ArrayList<String> satir : tablo) {
-            dc.deleteItem(satir.get(0));
-            dc.verifyContainsTextFunction(dc.successMessage, "success");
-        }
-    }
 }
