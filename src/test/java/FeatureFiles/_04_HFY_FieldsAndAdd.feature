@@ -16,3 +16,4 @@ Feature:Test
 
       And User sending the keys in Dialog Content
       |   nameInput  | halil |
+
