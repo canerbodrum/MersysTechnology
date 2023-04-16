@@ -100,7 +100,8 @@ public class DialogContent extends Parent{
     @FindBy(xpath="/html/body/hot-toast-container/div/div/hot-toast/div/div/div[2]/div/dynamic-view/div")
     public WebElement deleteNegative;
 
-
+    @FindBy(xpath="(//ms-edit-button/button)[1]")
+    public WebElement editSchool;
 
     public WebElement getWebElement(String strButton){
 
@@ -126,7 +127,7 @@ public class DialogContent extends Parent{
             case "editPositionCatagories" : return editPositionCatagories;
             case "addNegative" : return addNegative;
             case "deleteNegative" : return deleteNegative ;
-
+            case "editSchool" : return editSchool ;
         }
 
         return null;

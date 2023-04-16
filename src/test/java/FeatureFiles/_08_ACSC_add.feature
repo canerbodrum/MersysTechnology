@@ -5,18 +5,19 @@ Feature: Human Resources Test
     When Enter username and password and click login button
     Then User should login succesfully
 
-  Scenario: Human Resources  Position Catagories Add Functionality
-    When Click on the element in LeftNav
-      | humanResources     |
-      | setup         |
-      | schollSetup |
+  Scenario: Scholls  Position Catagories Add Functionality
+    And Click on the element in LeftNav
+      | humanResources |
+      | setup          |
+      | schollSetup    |
+      | departments    |
 
-    Then  Click on the element in Dialog
+    And Click on the element in Dialog
       | addButton |
 
     And User sending the keys in Dialog Content
       | nameInput | ahmet |
-
+      | codeInput | 777   |
     And Click on the element in Dialog
       | saveButton |
 
