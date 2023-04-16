@@ -94,6 +94,16 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//*[@id='ms-table-0']/div/cdk-virtual-scroll-viewport/div[1]/table/tbody/tr/td[3]/div[1]/ms-edit-button/button")
     public WebElement editPositionCatagories;
 
+    @FindBy(xpath="/html/body/hot-toast-container/div/div/hot-toast/div/div/div[2]/div/dynamic-view/div")
+    public WebElement addNegative;
+
+    @FindBy(xpath="/html/body/hot-toast-container/div/div/hot-toast/div/div/div[2]/div/dynamic-view/div")
+    public WebElement deleteNegative;
+
+
+
+
+
     public WebElement getWebElement(String strButton){
 
         switch (strButton)
@@ -116,6 +126,8 @@ public class DialogContent extends Parent{
             case "deleteImageBtn" : return deleteImageBtn;
             case "deleteDialogBtn" : return deleteDialogBtn;
             case "editPositionCatagories" : return editPositionCatagories;
+            case "addNegative" : return addNegative;
+            case "deleteNegative" : return deleteNegative ;
 
         }
 
