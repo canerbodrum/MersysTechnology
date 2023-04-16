@@ -51,7 +51,11 @@ public class LeftNav extends Parent{
     @FindBy(xpath="//*[@id='container-1']/fuse-sidebar/navbar/navbar-vertical-style-1/mat-toolbar/div[1]/div/div/div/fuse-navigation/div/fuse-nav-vertical-group/div/fuse-nav-vertical-collapsable[6]/div/fuse-nav-vertical-collapsable[1]/div/fuse-nav-vertical-item[4]/a/span")
     public WebElement positioncatagories;
 
+    @FindBy(xpath="//*[@id='container-1']/fuse-sidebar/navbar/navbar-vertical-style-1/mat-toolbar/div[1]/div/div/div/fuse-navigation/div/fuse-nav-vertical-group/div/fuse-nav-vertical-collapsable[1]/div/fuse-nav-vertical-collapsable[2]/a/span")
+    public WebElement schollSetup;
 
+    @FindBy(xpath="/html/body/app/vertical-layout-1/div/div/fuse-sidebar/navbar/navbar-vertical-style-1/mat-toolbar/div[1]/div/div/div/fuse-navigation/div/fuse-nav-vertical-group/div/fuse-nav-vertical-collapsable[1]/div/fuse-nav-vertical-collapsable[2]/div/fuse-nav-vertical-item[5]/a/span")
+    public WebElement departments;
     public WebElement getWebElement(String strButton){
 
         switch (strButton)
@@ -69,7 +73,8 @@ public class LeftNav extends Parent{
             case "humanSetup" : return humanSetup;
             case "attestations" : return attestations;
             case "positioncatagories" : return positioncatagories;
-
+            case "schollSetup" : return schollSetup;
+            case "departments" : return departments;
         }
 
         return null;
