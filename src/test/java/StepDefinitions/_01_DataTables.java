@@ -11,13 +11,19 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
 public class _01_DataTables {
     DialogContent dc=new DialogContent();
     LeftNav ln=new LeftNav();
+
+    WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
 
     @Given("Navigate to Campus")
     public void navigateToCampus() {
@@ -181,5 +187,16 @@ public class _01_DataTables {
 
     @And("we should have search function for this page.")
     public void weShouldHaveSearchFunctionForThisPage() {
+    }
+
+    @Then("Negative message is displayed")
+    public void negativeMessageIsDisplayed() {
+        dc.verifyContainsTextFunction(dc.addNegative,"already exists");
+    }
+
+    @Then("Negative delete message is displayed")
+    public void negativeDeleteMessageIsDisplayed() {
+        wait.until(ExpectedConditions.visibilityOf(dc.deleteNegative));
+        Assert.assertTrue(dc.deleteNegative.isDisplayed());
     }
 }
