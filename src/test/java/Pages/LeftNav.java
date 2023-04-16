@@ -48,6 +48,10 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "//span[text()='Attestations']")
     public WebElement attestations;
 
+    @FindBy(xpath="//*[@id='container-1']/fuse-sidebar/navbar/navbar-vertical-style-1/mat-toolbar/div[1]/div/div/div/fuse-navigation/div/fuse-nav-vertical-group/div/fuse-nav-vertical-collapsable[6]/div/fuse-nav-vertical-collapsable[1]/div/fuse-nav-vertical-item[4]/a/span")
+    public WebElement positioncatagories;
+
+
     public WebElement getWebElement(String strButton){
 
         switch (strButton)
@@ -64,6 +68,8 @@ public class LeftNav extends Parent{
             case "humanResources" : return humanResources;
             case "humanSetup" : return humanSetup;
             case "attestations" : return attestations;
+            case "positioncatagories" : return positioncatagories;
+
         }
 
         return null;

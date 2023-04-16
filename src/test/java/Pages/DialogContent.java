@@ -91,15 +91,8 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath="//*[@id='container-3']/content/app-attestation/ms-browse/div/ms-browse-search/div/mat-form-field")
     public WebElement attestationsName;
-
-    @FindBy(xpath="/html/body/hot-toast-container/div/div/hot-toast/div/div/div[2]/div/dynamic-view/div")
-    public WebElement addNegative;
-
-    @FindBy(xpath="//*[text()=' There is no data to display ']")
-    public WebElement deleteNegative;
-
-
-
+    @FindBy(xpath="//*[@id='ms-table-0']/div/cdk-virtual-scroll-viewport/div[1]/table/tbody/tr/td[3]/div[1]/ms-edit-button/button")
+    public WebElement editPositionCatagories;
 
     public WebElement getWebElement(String strButton){
 
@@ -122,8 +115,8 @@ public class DialogContent extends Parent{
             case "searchButton" : return searchButton;
             case "deleteImageBtn" : return deleteImageBtn;
             case "deleteDialogBtn" : return deleteDialogBtn;
-            case "addNegative" : return addNegative;
-            case "deleteNegative" : return deleteNegative;
+            case "editPositionCatagories" : return editPositionCatagories;
+
         }
 
         return null;

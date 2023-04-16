@@ -170,6 +170,7 @@ public class _01_DataTables {
 
     @When("Add Subject Categories, Edit Subject Categories")
     public void addSubjectCategoriesEditSubjectCategories() {
+
     }
 
     @Then("Delete Subject Categories for setting different education")
