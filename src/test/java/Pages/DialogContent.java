@@ -103,6 +103,25 @@ public class DialogContent extends Parent{
     @FindBy(xpath="(//ms-edit-button/button)[1]")
     public WebElement editSchool;
 
+    @FindBy(xpath="//ms-text-field[@formcontrolname='iban']/input")
+    public WebElement iban;
+
+    @FindBy(xpath="//ms-text-field[@formcontrolname='integrationCode']/input")
+    public WebElement integrationCode2;
+
+    @FindBy(xpath="//mat-select[@formcontrolname='currency']")
+    public WebElement currency;
+
+    @FindBy(xpath="(//div[@role='listbox']/mat-option/span)[4]")
+    public WebElement currencyMoney;
+
+    @FindBy(xpath="//ms-edit-button[@table='true']/button")
+    public WebElement editButton;
+
+    @FindBy(xpath="//*[text()=' There is no data to display ']")
+    public WebElement noData;
+
+
     public WebElement getWebElement(String strButton){
 
         switch (strButton)
@@ -128,6 +147,13 @@ public class DialogContent extends Parent{
             case "addNegative" : return addNegative;
             case "deleteNegative" : return deleteNegative ;
             case "editSchool" : return editSchool ;
+            case "iban" : return iban ;
+            case "integrationCode2" : return integrationCode2 ;
+            case "currency" : return currency ;
+            case "currencyMoney" : return currencyMoney ;
+            case "editButton" : return editButton ;
+            case "noData" : return noData ;
+
         }
 
         return null;
