@@ -199,4 +199,9 @@ public class _01_DataTables {
         wait.until(ExpectedConditions.visibilityOf(dc.deleteNegative));
         Assert.assertTrue(dc.deleteNegative.isDisplayed());
     }
+
+    @Then("No Data to Display")
+    public void noDataToDisplay() {
+            dc.verifyContainsTextFunction(dc.noData,"no data");
+    }
 }
