@@ -21,6 +21,22 @@ Feature: Human Resources Test
       | saveButton |
 
     Then Success message should be displayed
+  Scenario: Human Resources  Position Catagories Negative Add Functionality
+    When Click on the element in LeftNav
+      | humanResources     |
+      | humanSetup         |
+      | positioncatagories |
+
+    Then  Click on the element in Dialog
+      | addButton |
+
+    And User sending the keys in Dialog Content
+      | nameInput | ahmet |
+
+    And Click on the element in Dialog
+      | saveButton |
+
+    Then Negative message is displayed
 
   Scenario: Human Resources  PositionCatagories Edit Functionality
     When Click on the element in LeftNav

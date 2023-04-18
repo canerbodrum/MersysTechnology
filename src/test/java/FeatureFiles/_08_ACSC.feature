@@ -50,8 +50,6 @@ Feature: Human Resources Test
       | setup          |
       | schollSetup    |
       | departments    |
-
-
     And User delete item from Dialog Content
       | delete1 |
 
