@@ -121,6 +121,9 @@ public class DialogContent extends Parent{
     @FindBy(xpath="//*[text()=' There is no data to display ']")
     public WebElement noData;
 
+    @FindBy(xpath="(//ms-delete-button/button)[1]")
+    public WebElement delete1;
+
 
     public WebElement getWebElement(String strButton){
 
