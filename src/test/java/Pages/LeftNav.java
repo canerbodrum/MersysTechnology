@@ -51,8 +51,8 @@ public class LeftNav extends Parent{
     @FindBy(xpath="//*[@id='container-1']/fuse-sidebar/navbar/navbar-vertical-style-1/mat-toolbar/div[1]/div/div/div/fuse-navigation/div/fuse-nav-vertical-group/div/fuse-nav-vertical-collapsable[6]/div/fuse-nav-vertical-collapsable[1]/div/fuse-nav-vertical-item[4]/a/span")
     public WebElement positioncatagories;
 
-    @FindBy(xpath="//*[@id='container-1']/fuse-sidebar/navbar/navbar-vertical-style-1/mat-toolbar/div[1]/div/div/div/fuse-navigation/div/fuse-nav-vertical-group/div/fuse-nav-vertical-collapsable[1]/div/fuse-nav-vertical-collapsable[2]/a/span")
-    public WebElement schollSetup;
+    @FindBy(xpath="//span[text()='School Setup']")
+    public WebElement schoolSetup;
 
     @FindBy(xpath="/html/body/app/vertical-layout-1/div/div/fuse-sidebar/navbar/navbar-vertical-style-1/mat-toolbar/div[1]/div/div/div/fuse-navigation/div/fuse-nav-vertical-group/div/fuse-nav-vertical-collapsable[1]/div/fuse-nav-vertical-collapsable[2]/div/fuse-nav-vertical-item[5]/a/span")
     public WebElement departments;
@@ -60,6 +60,10 @@ public class LeftNav extends Parent{
     @FindBy(xpath="//*[text()='Bank Accounts']")
     public WebElement bankAccounts;
 
+    @FindBy(xpath = "//span[text()='Locations']")
+    public WebElement locations;
+    @FindBy(xpath = "//span[text()='Discounts']")
+    public WebElement discounts;
 
 
 
@@ -80,9 +84,11 @@ public class LeftNav extends Parent{
             case "humanSetup" : return humanSetup;
             case "attestations" : return attestations;
             case "positioncatagories" : return positioncatagories;
-            case "schollSetup" : return schollSetup;
+            case "schoolSetup" : return schoolSetup;
             case "departments" : return departments;
             case "bankAccounts" : return bankAccounts;
+            case "locations": return locations;
+            case "discounts": return discounts;
         }
 
         return null;

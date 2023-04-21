@@ -204,4 +204,10 @@ public class _01_DataTables {
     public void noDataToDisplay() {
             dc.verifyContainsTextFunction(dc.noData,"no data");
     }
+
+    @Then("error message should be displayed")
+    public void errorMessageShouldBeDisplayed() {dc.verifyContainsTextFunction(dc.error,"error");
+
+
+    }
 }

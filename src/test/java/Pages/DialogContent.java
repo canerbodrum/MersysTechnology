@@ -68,10 +68,10 @@ public class DialogContent extends Parent{
     private WebElement integrationCode;
 
     @FindBy(xpath="//ms-integer-field[@formcontrolname='priority']/input")
-    private WebElement priorityCode;
+    public WebElement priorityCode;
 
     @FindBy(xpath="//mat-slide-toggle[@formcontrolname='active']")
-    private WebElement toggleBar;
+    public WebElement toggleBar;
 
 
     @FindBy(xpath="//mat-select//span[text()='Academic Period']")
@@ -123,7 +123,13 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath="(//ms-delete-button/button)[1]")
     public WebElement delete1;
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='capacity']/input")
+    public WebElement capacity;
+    @FindBy (xpath = "//div[text()='error.http.400']")
+    public WebElement error;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='description']/input")
+    public WebElement description;
 
     public WebElement getWebElement(String strButton){
 
@@ -156,6 +162,12 @@ public class DialogContent extends Parent{
             case "currencyMoney" : return currencyMoney ;
             case "editButton" : return editButton ;
             case "noData" : return noData ;
+            case "shortName": return shortName;
+            case "capacity": return capacity;
+            case "error": return error;
+            case "description": return description;
+
+
 
         }
 
