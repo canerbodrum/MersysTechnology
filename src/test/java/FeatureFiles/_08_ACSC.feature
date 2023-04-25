@@ -7,9 +7,8 @@ Feature: Human Resources Test
 
   Scenario: Scholls  Position Catagories Add Functionality
     And Click on the element in LeftNav
-      | humanResources |
       | setup          |
-      | schollSetup    |
+      | schoolSetup    |
       | departments    |
 
     And Click on the element in Dialog
@@ -22,12 +21,27 @@ Feature: Human Resources Test
       | saveButton |
 
     Then Success message should be displayed
+  Scenario: Scholls  Position Catagories Negative Add Functionality
+    And Click on the element in LeftNav
+      | setup          |
+      | schoolSetup    |
+      | departments    |
+
+    And Click on the element in Dialog
+      | addButton |
+
+    And User sending the keys in Dialog Content
+      | nameInput | ahmet |
+      | codeInput | 777   |
+    And Click on the element in Dialog
+      | saveButton |
+
+    Then Negative delete message is displayed
 
   Scenario: Schools  Position Catagories Edit Functionality
     And Click on the element in LeftNav
-      | humanResources |
       | setup          |
-      | schollSetup    |
+      | schoolSetup    |
       | departments    |
 
 
@@ -44,13 +58,22 @@ Feature: Human Resources Test
       | saveButton |
     Then Success message should be displayed
 
-  Scenario: Schools  Position Catagories Edit Functionality
+  Scenario: Schools  Position Catagories Delete Functionality
     And Click on the element in LeftNav
-      | humanResources |
       | setup          |
       | schollSetup    |
       | departments    |
     And User delete item from Dialog Content
-      | delete1 |
+      | korcan |
 
     Then Success message should be displayed
+
+  Scenario: Schools  Position Catagories Negative Delete Functionality
+    And Click on the element in LeftNav
+      | setup          |
+      | schollSetup    |
+      | departments    |
+    And User delete item from Dialog Content
+      | korcan |
+
+    Then No Data to Display

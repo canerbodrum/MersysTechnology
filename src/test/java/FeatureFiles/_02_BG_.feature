@@ -4,7 +4,7 @@ Feature: Human Resources Test
     Given Navigate to Campus
     When Enter username and password and click login button
     Then User should login succesfully
-
+@Smoke
   Scenario: Human Resources  Attestations Add Functionality
     When Click on the element in LeftNav
       | humanResources |
@@ -17,7 +17,7 @@ Feature: Human Resources Test
     And Click on the element in Dialog
       | saveButton |
     Then Success message should be displayed
-
+  @Smoke
   Scenario: Human Resources  Attestations  Negative Add Functionality
     When Click on the element in LeftNav
       | humanResources |
@@ -30,7 +30,7 @@ Feature: Human Resources Test
     And Click on the element in Dialog
       | saveButton |
     Then Negative message is displayed
-
+  @Smoke
   Scenario: Human Resources  Attestations  Edit Functionality
     When Click on the element in LeftNav
       | humanResources |
@@ -48,7 +48,7 @@ Feature: Human Resources Test
     And Click on the element in Dialog
       | saveButton |
     And Success message should be displayed
-
+  @Smoke
   Scenario: Human Resources  Attestations Delete Functionality
     When Click on the element in LeftNav
       | humanResources |
@@ -63,7 +63,7 @@ Feature: Human Resources Test
       | deleteImageBtn  |
       | deleteDialogBtn |
     Then Success message should be displayed
-
+  @Smoke
   Scenario: Human Resources  Attestations Negative Delete Functionality
     When Click on the element in LeftNav
       | humanResources |

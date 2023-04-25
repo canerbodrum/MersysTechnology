@@ -70,4 +70,4 @@ Feature: Human Resources Test
     And User delete item from Dialog Content
       | korcan |
 
-    Then Success message should be displayed
+    Then Negative delete message is displayed
