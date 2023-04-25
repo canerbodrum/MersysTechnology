@@ -61,7 +61,7 @@ Feature: Human Resources Test
   Scenario: Schools  Position Catagories Delete Functionality
     And Click on the element in LeftNav
       | setup          |
-      | schollSetup    |
+      | schoolSetup    |
       | departments    |
     And User delete item from Dialog Content
       | korcan |
@@ -71,7 +71,7 @@ Feature: Human Resources Test
   Scenario: Schools  Position Catagories Negative Delete Functionality
     And Click on the element in LeftNav
       | setup          |
-      | schollSetup    |
+      | schoolSetup    |
       | departments    |
     And User delete item from Dialog Content
       | korcan |
